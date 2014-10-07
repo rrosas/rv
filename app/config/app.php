@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://ubuntu/ringvoz/public',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -122,7 +122,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+	
+		'Mgallegos\LaravelJqgrid\LaravelJqgridServiceProvider', #RARC	
 	),
 
 	/*
@@ -189,6 +190,9 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
+
+		'GridRender' 		=> 'Mgallegos\LaravelJqgrid\Facades\GridRender', #RARC
+		'GridEncoder' 		=> 'Mgallegos\LaravelJqgrid\Facades\GridEncoder', #RARC
 
 	),
 

@@ -6,8 +6,26 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"fideloper/proxy": "dev-master"
+		"fideloper/proxy": "dev-master",
+		"noiselabs/nusoap-bundle": "dev-master",
+		"mgallegos/laravel-jqgrid": "1.*"
 	},
+	"repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "nusphere/nusoap",
+                "version": "0.9.5",
+                "dist": {
+                    "url": "http://downloads.sourceforge.net/project/nusoap/nusoap/0.9.5/nusoap-0.9.5.zip",
+                    "type": "zip"
+                },
+                "autoload": {
+                    "classmap": ["lib/"]
+                }
+            }
+        }
+    ],
 	"autoload": {
 		"classmap": [
 			"app/commands",
@@ -15,7 +33,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php",
+			"app/lib"
 		]
 	},
 	"scripts": {

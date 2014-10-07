@@ -1,17 +1,14 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
-Route::get('/', function()
+Route::ANY('/', function()
 {
-	return View::make('hello');
+	$soapCountries = json_encode(App::make('soapController')->GetCountries());
+	$amounts = json_encode(App::make('payPlatformController')->GetAmounts());	
+	return View::make('main')->with(array('countries'=>$soapCountries, 'amounts'=>$amounts));
 });
+
+Route::POST('searchCurrency', 'soapController@GetCurrency');
+
+Route::POST('saveTransaction', 'payPlatformController@saveTransaction');
+
+Route::POST('grid-data', 'payPlatformController@jsonGridTest');

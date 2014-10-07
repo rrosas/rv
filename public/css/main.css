@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+	background: url('bg.png');
+	background: linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),  url(bg.png);
+}
+body {
+	font-family: "Ubuntu", arial, verdana;
+}
+#errmsg {
+	color: red;
+}
+.box {
+    background: none repeat scroll 0 0 #f50;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    height: 100px;
+    padding: 20px;    
+}
