@@ -167,11 +167,8 @@
 <form action="">
 	<h2 class="fs-title">Summary</h2>
 	<h3 class="fs-subtitle">Transaction Details</h3>
-	<div id="summary" name="summary" class="box"></div>
-	<br><br>
-	<?php 
-		//$grid = App::make('payPlatformController')->BuildGrid();
-	?>	
+	<div id="summary" name="summary" class="box" style="height:165px"><br></div>
+	
 	<input type="hidden" id="countryH2" name="countryH2">
 	<input type="hidden" id="currencyH2" name="currencyH2">
 	<input type="hidden" id="rechargeAmountH2" name="rechargeAmountH2">

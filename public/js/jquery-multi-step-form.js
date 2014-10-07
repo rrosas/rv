@@ -72,8 +72,7 @@
 
                 var Tax = parseFloat(($("#rechargeAmountH").val()*0.07)).toPrecision(4);
                 var Total = parseFloat($("#rechargeAmountH").val())+parseFloat(Tax);
-                alert('<b>Your account has been successfully Recharged</b><hr><br>Amount: '+$("#rechargeAmountH").val()+'<br>Tax: '+Tax+'<br>Total Amount: '+Total+' '+$("#currencyH").val()+'<br><br>');
-                $("#summary").html('<b>Your account has been successfully Recharged</b><hr><br>Amount: '+$("#rechargeAmountH").val()+'<br>Tax: '+Tax+'<br>Total Amount: '+Total+' '+$("#currencyH").val()+'<br><br>');
+                $("#summary").html('<b>Your account has been successfully Recharged</b><hr>Amount: '+$("#rechargeAmountH").val()+'<br>Tax: '+Tax+'<br>Total Amount: '+Total+' '+$("#currencyH").val());
 
                 $.ajax({
                     url: "index.php/saveTransaction",
